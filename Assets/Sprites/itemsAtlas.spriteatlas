@@ -1,0 +1,210 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: itemsAtlas
+  m_EditorData:
+    textureSettings:
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      colorSpace: 1
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+    platformSettings: []
+    packingParameters:
+      paddingPower: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    packedHash:
+      serializedVersion: 2
+      Hash: 5e2ef497f00c4c5ad3b6dad56923e5d3
+    variantMultiplier: 1
+    bindAsDefault: 1
+    finalFormat: 4
+    hashString: 5e2ef497f00c4c5ad3b6dad56923e5d3
+    totalSpriteSurfaceArea: 917504
+    packables:
+    - {fileID: 102900000, guid: f1635581ef3a77547badbd3dad454332, type: 3}
+    packedSpriteRenderDataKeys:
+    - e4ef22facdc34c94d9d3fc57356a19c8: 21300000
+    - 33b634db00a8cc744a75e03ab86417df: 21300000
+    - caa85554d4b538b4d8256705be59412e: 21300000
+    - a4cfd0226c15fe241907a57769579467: 21300000
+    - 55f715a92db9f404eb31d314b664ffeb: 21300000
+    - 6b84b6fec4abdb5479c2b720a5f3790f: 21300000
+    - ab5085a8d3d32fb4ca937c5affd0da20: 21300000
+    - 315b1b757138ebd4f96b63afc7498417: 21300000
+    - 7410471b0cbd7a04dbebbe0a2948047f: 21300000
+    - 310b6d40a5440f3428ec419477da8358: 21300000
+    - 86fca40d90ee90d46bb303170c5933f5: 21300000
+    - 46d50a18e133fff4f8a430ad47b1d151: 21300000
+    - e77a9fdd99e704b43a4564b507fbc773: 21300000
+    - 322d4ee70a58f59479275d97ccc49b1c: 21300000
+    - 8cecc309844e22645920017d33c78c75: 21300000
+    - 803ea78559be054458b4e7079d5593b7: 21300000
+    - 06c332061362a4c4c89e98ceaec37580: 21300000
+    - 1714ea00cd57d584bbb204e38d7b092e: 21300000
+    - d37555e6a32ca8c49a02d687c9857ed9: 21300000
+    - fe0e3588963667049bf3d40afdd4a52d: 21300000
+    - 4cba0d95e1449974cb8a7f5b643037b1: 21300000
+    - 0ee95cbcd55b38d4cb04daab9ab73c90: 21300000
+    - bf1b94c7d212a5a4eaf95723e3f197df: 21300000
+    - aed4b0f9ad0a05e49a3bc7e690e06b23: 21300000
+    - 78b1b047a8846eb4faaf054b1c1f1b4a: 21300000
+    - 9d13e5252836939438dc9bbeb99454ef: 21300000
+    - 7bc9943ddd55d38409c6e02df2756ff6: 21300000
+    - 724a57e03a94a6b4393a7c651e9f7390: 21300000
+    - 993426c48de0bc84280ba14d5fbd0ca6: 21300000
+    - 04ec52a32ae6d7e4280cd3125584e738: 21300000
+    - 43f27df5f588e324eb88ebc2d9382d08: 21300000
+    - 76098fe4d5ce88745beb41674acc9700: 21300000
+    - c71f00fb3a302244eac724fb4871d293: 21300000
+    - 03d8d89708d7f624588872c5ddccc4b7: 21300000
+    - 4bbdde33154f0564d87270821a773879: 21300000
+    - 8a85be6221f9df14d905cc843f5080e1: 21300000
+    - 037e8a39cb9fbda4c82e31bd0cc6cf61: 21300000
+    - ad1de462649d5da41baa509e99b5f536: 21300000
+    - 82bd1634a80f735488a1342f6d1ea427: 21300000
+    - 6571158d118baf042a4bf937da2e4a3e: 21300000
+    - d5fed225c0f0a9b4ba3a9d982f91a0da: 21300000
+    - d176cb84a24886240b7e79de4cf3202c: 21300000
+    - 738e104dd071fa941bbcaf1efd79d680: 21300000
+    - 86a82f4f1ee998648b4cc0c374859111: 21300000
+    - c621a9daff69cc74f81f3fd5d6fe4930: 21300000
+    - 593815a02b9dbd4489851eeab2aa3c0d: 21300000
+    - a13f8ac3221265a46b807c7197cd5506: 21300000
+    - 07df4cadcda51b54a8ae481e2be3efdd: 21300000
+    - 2d1cc5c0aeb137943abf30d75767a5a9: 21300000
+    - 178dcd464e8614a45b7c3703d86f4903: 21300000
+    - bf8c6d33929842346bf4d81f1282d5c3: 21300000
+    - dc08866922f4b9e4dab462096cf23ca5: 21300000
+    - ffd86b3060495bd45b85d4abdad9198f: 21300000
+    - 869fa77e9862c094493835bf3167cb61: 21300000
+    - 85943347f8ba0a04087171b15aeed79e: 21300000
+    - bb4fdc02af2d91948aed7e3430ca7ebd: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: e4ef22facdc34c94d9d3fc57356a19c8, type: 3}
+  - {fileID: 21300000, guid: 33b634db00a8cc744a75e03ab86417df, type: 3}
+  - {fileID: 21300000, guid: caa85554d4b538b4d8256705be59412e, type: 3}
+  - {fileID: 21300000, guid: a4cfd0226c15fe241907a57769579467, type: 3}
+  - {fileID: 21300000, guid: 55f715a92db9f404eb31d314b664ffeb, type: 3}
+  - {fileID: 21300000, guid: 6b84b6fec4abdb5479c2b720a5f3790f, type: 3}
+  - {fileID: 21300000, guid: ab5085a8d3d32fb4ca937c5affd0da20, type: 3}
+  - {fileID: 21300000, guid: 315b1b757138ebd4f96b63afc7498417, type: 3}
+  - {fileID: 21300000, guid: 7410471b0cbd7a04dbebbe0a2948047f, type: 3}
+  - {fileID: 21300000, guid: 310b6d40a5440f3428ec419477da8358, type: 3}
+  - {fileID: 21300000, guid: 86fca40d90ee90d46bb303170c5933f5, type: 3}
+  - {fileID: 21300000, guid: 46d50a18e133fff4f8a430ad47b1d151, type: 3}
+  - {fileID: 21300000, guid: e77a9fdd99e704b43a4564b507fbc773, type: 3}
+  - {fileID: 21300000, guid: 322d4ee70a58f59479275d97ccc49b1c, type: 3}
+  - {fileID: 21300000, guid: 8cecc309844e22645920017d33c78c75, type: 3}
+  - {fileID: 21300000, guid: 803ea78559be054458b4e7079d5593b7, type: 3}
+  - {fileID: 21300000, guid: 06c332061362a4c4c89e98ceaec37580, type: 3}
+  - {fileID: 21300000, guid: 1714ea00cd57d584bbb204e38d7b092e, type: 3}
+  - {fileID: 21300000, guid: d37555e6a32ca8c49a02d687c9857ed9, type: 3}
+  - {fileID: 21300000, guid: fe0e3588963667049bf3d40afdd4a52d, type: 3}
+  - {fileID: 21300000, guid: 4cba0d95e1449974cb8a7f5b643037b1, type: 3}
+  - {fileID: 21300000, guid: 0ee95cbcd55b38d4cb04daab9ab73c90, type: 3}
+  - {fileID: 21300000, guid: bf1b94c7d212a5a4eaf95723e3f197df, type: 3}
+  - {fileID: 21300000, guid: aed4b0f9ad0a05e49a3bc7e690e06b23, type: 3}
+  - {fileID: 21300000, guid: 78b1b047a8846eb4faaf054b1c1f1b4a, type: 3}
+  - {fileID: 21300000, guid: 9d13e5252836939438dc9bbeb99454ef, type: 3}
+  - {fileID: 21300000, guid: 7bc9943ddd55d38409c6e02df2756ff6, type: 3}
+  - {fileID: 21300000, guid: 724a57e03a94a6b4393a7c651e9f7390, type: 3}
+  - {fileID: 21300000, guid: 993426c48de0bc84280ba14d5fbd0ca6, type: 3}
+  - {fileID: 21300000, guid: 04ec52a32ae6d7e4280cd3125584e738, type: 3}
+  - {fileID: 21300000, guid: 43f27df5f588e324eb88ebc2d9382d08, type: 3}
+  - {fileID: 21300000, guid: 76098fe4d5ce88745beb41674acc9700, type: 3}
+  - {fileID: 21300000, guid: c71f00fb3a302244eac724fb4871d293, type: 3}
+  - {fileID: 21300000, guid: 03d8d89708d7f624588872c5ddccc4b7, type: 3}
+  - {fileID: 21300000, guid: 4bbdde33154f0564d87270821a773879, type: 3}
+  - {fileID: 21300000, guid: 8a85be6221f9df14d905cc843f5080e1, type: 3}
+  - {fileID: 21300000, guid: 037e8a39cb9fbda4c82e31bd0cc6cf61, type: 3}
+  - {fileID: 21300000, guid: ad1de462649d5da41baa509e99b5f536, type: 3}
+  - {fileID: 21300000, guid: 82bd1634a80f735488a1342f6d1ea427, type: 3}
+  - {fileID: 21300000, guid: 6571158d118baf042a4bf937da2e4a3e, type: 3}
+  - {fileID: 21300000, guid: d5fed225c0f0a9b4ba3a9d982f91a0da, type: 3}
+  - {fileID: 21300000, guid: d176cb84a24886240b7e79de4cf3202c, type: 3}
+  - {fileID: 21300000, guid: 738e104dd071fa941bbcaf1efd79d680, type: 3}
+  - {fileID: 21300000, guid: 86a82f4f1ee998648b4cc0c374859111, type: 3}
+  - {fileID: 21300000, guid: c621a9daff69cc74f81f3fd5d6fe4930, type: 3}
+  - {fileID: 21300000, guid: 593815a02b9dbd4489851eeab2aa3c0d, type: 3}
+  - {fileID: 21300000, guid: a13f8ac3221265a46b807c7197cd5506, type: 3}
+  - {fileID: 21300000, guid: 07df4cadcda51b54a8ae481e2be3efdd, type: 3}
+  - {fileID: 21300000, guid: 2d1cc5c0aeb137943abf30d75767a5a9, type: 3}
+  - {fileID: 21300000, guid: 178dcd464e8614a45b7c3703d86f4903, type: 3}
+  - {fileID: 21300000, guid: bf8c6d33929842346bf4d81f1282d5c3, type: 3}
+  - {fileID: 21300000, guid: dc08866922f4b9e4dab462096cf23ca5, type: 3}
+  - {fileID: 21300000, guid: ffd86b3060495bd45b85d4abdad9198f, type: 3}
+  - {fileID: 21300000, guid: 869fa77e9862c094493835bf3167cb61, type: 3}
+  - {fileID: 21300000, guid: 85943347f8ba0a04087171b15aeed79e, type: 3}
+  - {fileID: 21300000, guid: bb4fdc02af2d91948aed7e3430ca7ebd, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - ore_silver
+  - arrow
+  - sword_silver
+  - hoe_diamond
+  - shovel_diamond
+  - hammer_diamond
+  - fish
+  - pick_gold
+  - hoe_silver
+  - flail_gold
+  - hoe_bronze
+  - stew
+  - flail_diamond
+  - shovel_gold
+  - bowl
+  - sword_bronze
+  - sword_gold
+  - axe_gold
+  - hoe_gold
+  - fish_cooked
+  - flail_bronze
+  - axe_silver
+  - ore_iron
+  - boat
+  - ore_ironAlt
+  - ore_emerald
+  - ore_coal
+  - sword_iron
+  - hammer_silver
+  - pick_silver
+  - wheat
+  - hammer_bronze
+  - shovel_iron
+  - apple
+  - hammer_iron
+  - bowArrow
+  - pick_iron
+  - hoe_iron
+  - hammer_gold
+  - pick_bronze
+  - flail_iron
+  - axe_diamond
+  - sword_diamond
+  - axe_iron
+  - seed
+  - axe_bronze
+  - ore_diamond
+  - ore_gold
+  - flail_silver
+  - shovel_bronze
+  - bow
+  - minecart
+  - shovel_silver
+  - fishingPole
+  - ore_ruby
+  - pick_diamond
+  m_Tag: itemsAtlas
+  m_IsVariant: 0
