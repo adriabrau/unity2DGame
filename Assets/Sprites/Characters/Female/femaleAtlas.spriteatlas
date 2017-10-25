@@ -8,29 +8,31 @@ SpriteAtlas:
   m_Name: femaleAtlas
   m_EditorData:
     textureSettings:
+      serializedVersion: 2
       anisoLevel: 1
       compressionQuality: 50
       maxTextureSize: 2048
       textureCompression: 0
-      colorSpace: 1
       filterMode: 1
       generateMipMaps: 0
       readable: 0
       crunchedCompression: 0
+      sRGB: 0
     platformSettings: []
     packingParameters:
-      paddingPower: 2
+      serializedVersion: 2
+      padding: 4
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
     packedHash:
       serializedVersion: 2
-      Hash: e17e0ad2d522889abbe0ffef12810ae0
+      Hash: 26c06121b6ea39a9df29ee38c1890e2a
     variantMultiplier: 1
     bindAsDefault: 1
     finalFormat: 4
-    hashString: e17e0ad2d522889abbe0ffef12810ae0
+    hashString: 26c06121b6ea39a9df29ee38c1890e2a
     totalSpriteSurfaceArea: 211200
     packables:
     - {fileID: 102900000, guid: 33c25a6b12cc0a941ae66e04f8a3d57e, type: 3}

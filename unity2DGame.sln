@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unity2DGame", "unity2DGame.csproj", "{83B343FB-8122-6064-9904-D9E271AB61BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unity2DGame.Editor", "unity2DGame.Editor.csproj", "{2CAB5417-B7D4-6F22-2C60-4E0101C1DC45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83B343FB-8122-6064-9904-D9E271AB61BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B343FB-8122-6064-9904-D9E271AB61BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B343FB-8122-6064-9904-D9E271AB61BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B343FB-8122-6064-9904-D9E271AB61BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CAB5417-B7D4-6F22-2C60-4E0101C1DC45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CAB5417-B7D4-6F22-2C60-4E0101C1DC45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CAB5417-B7D4-6F22-2C60-4E0101C1DC45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CAB5417-B7D4-6F22-2C60-4E0101C1DC45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

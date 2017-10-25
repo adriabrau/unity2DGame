@@ -37,7 +37,7 @@ public class Collisions2D : MonoBehaviour {
     public Vector2 cellBoxPos;
     public Vector2 cellBoxSize;
 
-    private void Start()
+    public void MyStart()
     {
         ResetState();
     }
@@ -124,6 +124,11 @@ public class Collisions2D : MonoBehaviour {
         if(isCelled) isFalling = false;
         if(isCelled && !wasCelledLastFrame) justGotCelled = true;
         if(!isCelled && wasCelledLastFrame) justNOTCelled = true;
+
+    }
+    public void Flip(bool face)
+    {
+        if(face) sideBoxPos.x = Mathf.Abs(sideBoxPos.x);
 
     }
     // Update is called once per frame

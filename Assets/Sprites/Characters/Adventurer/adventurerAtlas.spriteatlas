@@ -8,29 +8,31 @@ SpriteAtlas:
   m_Name: adventurerAtlas
   m_EditorData:
     textureSettings:
+      serializedVersion: 2
       anisoLevel: 1
       compressionQuality: 50
       maxTextureSize: 2048
       textureCompression: 0
-      colorSpace: 1
       filterMode: 1
       generateMipMaps: 0
       readable: 0
       crunchedCompression: 0
+      sRGB: 0
     platformSettings: []
     packingParameters:
-      paddingPower: 2
+      serializedVersion: 2
+      padding: 4
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
     packedHash:
       serializedVersion: 2
-      Hash: a73b1d5982556fe36704147c4e1ef3da
+      Hash: c7ac78bd36539be0409011fc6adb6d89
     variantMultiplier: 1
     bindAsDefault: 1
     finalFormat: 4
-    hashString: a73b1d5982556fe36704147c4e1ef3da
+    hashString: c7ac78bd36539be0409011fc6adb6d89
     totalSpriteSurfaceArea: 211200
     packables:
     - {fileID: 102900000, guid: 94c274f0424eace44bc8f9274bc47001, type: 3}
