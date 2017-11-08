@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collisions2D))]
 public class PlayerBehaviourScript : MonoBehaviour
 {
-    public enum State { Default, Dead, God}
+    public enum State { Default, Dead, God }
     public State state;
 
     [Header("State")]
@@ -18,30 +18,42 @@ public class PlayerBehaviourScript : MonoBehaviour
     [Header("Physics")]
     public Rigidbody2D rb;
     public Collisions2D collisions;
-    [Header("Speed propierties")]
+    [Header("Speed properties")]
     public float walkSpeed = 2;
     public float runSpeed = 3;
     public float movementSpeed;
-
-    [Header("Force propierties")]
+    [Header("Force properties")]
     public float jumpWalkForce;
     public float jumpRunForce;
     public float jumpForce;
+    [Header("Movement")]
+    public Vector2 axis;
+    public float horizontalSpeed;
+    //[Header("Transforms")]
+    //public Transform flipTransform;
+    [Header("Graphics")]
+    public SpriteRenderer rend;
+    private Animator anim;
 
 
-    // Use this for initialization
-    void Start ()
+
+    void Start()
     {
         collisions = GetComponent<Collisions2D>();
-        collisions.MyStart();
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        rb = GetComponent<Rigidbody2D>();
+
+        collisions.Start();
+
+        isFacingRight = true;
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-		switch(state)
+        switch(state)
         {
             case State.Default:
+                DefaultUpdate();
                 break;
             case State.Dead:
                 break;
@@ -50,11 +62,111 @@ public class PlayerBehaviourScript : MonoBehaviour
             default:
                 break;
         }
-	}
+    }
+
     void DefaultUpdate()
     {
+        //Calcule el movimiento en horizontal
+        HorizontalMovement();
+        //Saltar
 
+        //Anim
+        anim.SetBool("isGrounded", collisions.isGrounded);
+        anim.SetFloat("speedX", Mathf.Abs(rb.velocity.x));
+        anim.SetFloat("speedY", Mathf.Abs(rb.velocity.y));
+    }
+
+    private void FixedUpdate()
+    {
+        collisions.FixedUpdate();
+
+        if(isJumping)
+        {
+            isJumping = false;
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+        //Aplicaremos el movimiento
+        rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
+    }
+
+    void HorizontalMovement()
+    {
+        if(!canMove)
+        {
+            horizontalSpeed = 0;
+            return;
+        }
+
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        if(-0.1f < axis.x && axis.x < 0.1f)
+        {
+            horizontalSpeed = 0;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            return;
+        }
+
+        if(collisions.isWalled)
+        {
+            if((isFacingRight && axis.x > 0.1f) || (!isFacingRight && axis.x < -0.1f))
+            {
+                horizontalSpeed = 0;
+                return;
+            }
+        }
+
+        if(isFacingRight && axis.x < -0.1f) Flip();
+        if(!isFacingRight && axis.x > 0.1f) Flip();
+
+        if(running) movementSpeed = runSpeed;
+        else movementSpeed = walkSpeed;
+
+        horizontalSpeed = axis.x * movementSpeed;
+    }
+    void VerticalMovement()
+    {
+        /*
+         * bool lookingUp
+         * bool lookingDown
+         * bool crouch
+         */
+    }
+    void Jump(float force)
+    {
+        jumpForce = force;
+        isJumping = true;
+    }
+    void Flip()
+    {
+        rend.flipX = !rend.flipX;
+        isFacingRight = !isFacingRight;
+        collisions.Flip(isFacingRight);
     }
 
 
+    #region Public functions
+    public void SetAxis(Vector2 inputAxis)
+    {
+        axis = inputAxis;
+    }
+    public void JumpStart()
+    {
+        if(!canJump) return;
+
+        if(state == State.Default)
+        {
+            if(collisions.isGrounded)
+            {
+                if(running) Jump(jumpRunForce);
+                else Jump(jumpWalkForce);
+            }
+        }
+
+    }
+    public void Damage(int hit)
+    {
+
+    }
+    #endregion
 }

@@ -37,7 +37,7 @@ public class Collisions2D : MonoBehaviour {
     public Vector2 cellBoxPos;
     public Vector2 cellBoxSize;
 
-    public void MyStart()
+    public void Start()
     {
         ResetState();
     }
@@ -128,8 +128,8 @@ public class Collisions2D : MonoBehaviour {
     }
     public void Flip(bool face)
     {
-        if(face) sideBoxPos.x = Mathf.Abs(sideBoxPos.x);
-
+        if(face) wallBoxPos.x = Mathf.Abs(wallBoxPos.x);
+        else wallBoxPos.x = -Mathf.Abs(wallBoxPos.x);
     }
     // Update is called once per frame
     private void OnDrawGizmosSelected ()

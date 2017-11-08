@@ -1069,6 +1069,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daff60276f35c64e9af071fa3bfd00f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  canMove: 1
+  canJump: 1
+  running: 0
+  isFacingRight: 1
+  isJumping: 0
+  rb: {fileID: 0}
+  collisions: {fileID: 0}
+  walkSpeed: 2
+  runSpeed: 3
+  movementSpeed: 0
+  jumpWalkForce: 2
+  jumpRunForce: 3
+  jumpForce: 1
+  axis: {x: 0, y: 0}
+  horizontalSpeed: 0
+  rend: {fileID: 1677640340}
+--- !u!95 &693938247
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 693938245}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c539fce99bcd53b49b3b9b03aad1659c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &698303830
 Prefab:
   m_ObjectHideFlags: 0
@@ -2233,6 +2267,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82310caa7cc5afd4baa3ea6fab37c71a, type: 2}
   m_IsPrefabParent: 0
+--- !u!212 &1677640340 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212064028012915890, guid: 8c931bab69fdb764282a940af8874b51,
+    type: 2}
+  m_PrefabInternal: {fileID: 1311458219}
 --- !u!1001 &1683320072
 Prefab:
   m_ObjectHideFlags: 0

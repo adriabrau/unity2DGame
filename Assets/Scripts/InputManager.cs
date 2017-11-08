@@ -7,39 +7,47 @@ public class InputManager : MonoBehaviour
     private PlayerBehaviourScript player;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviourScript>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        InputPause();
-        InputRun();
-        InputJump();
-        InputMovement();
     }
-    private void InputMovement()
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Pause game
+        InputPause();
+        // Movement
+        InputMovement();
+        // Jump
+        InputJump();
+        // Speed
+        InputSpeed();
+    }
+
+    #region Controls
+    void InputPause()
+    {
+        if(Input.GetButtonDown("Cancel")) Debug.Log("Pause game");
+    }
+
+    void InputMovement()
     {
         Vector2 axis = Vector2.zero;
         axis.x = Input.GetAxis("Horizontal");
         axis.y = Input.GetAxis("Vertical");
+        player.SetAxis(axis);
     }
-    private void InputRun()
+
+    void InputJump()
     {
-        if(Input.GetButtonDown("run")) player.running = true;
-        else if(Input.GetButtonDown("run")) player.running = false;
+        if(Input.GetButtonDown("Jump")) player.JumpStart();
     }
-    private void InputJump()
+
+    void InputSpeed()
     {
-        if(Input.GetButtonDown("Jump"))
-        {
-            player.JumpStart();
-        }
+        if(Input.GetButtonDown("Run")) player.running = true;
+        else if(Input.GetButtonUp("Run")) player.running = false;
     }
-    private void InputPause()
-    {
-        if(Input.GetButtonDown("Cancel")) Debug.Log("pausegame");
-    }
+    #endregion
 }
