@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 45d73adb299c1444bbe0529189f04f69
+timeCreated: 1521127577
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Headhunter Leftified For Death
+  fontNames:
+  - Headhunter Leftified For Death
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

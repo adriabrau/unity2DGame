@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unity2DGame", "unity2DGame.csproj", "{83B343FB-8122-6064-9904-D9E271AB61BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unity2DGame.Editor", "unity2DGame.Editor.csproj", "{2CAB5417-B7D4-6F22-2C60-4E0101C1DC45}"

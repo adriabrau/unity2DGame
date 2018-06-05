@@ -15,6 +15,7 @@ public class Collisions2D : MonoBehaviour {
     public bool justGotWalled;
     public bool justNOTWalled;
 
+    public bool isDead;
 
     public bool isCelled;
     public bool wasCelledLastFrame;
@@ -24,6 +25,7 @@ public class Collisions2D : MonoBehaviour {
 
     [Header("FilterPropierties")]
     public ContactFilter2D groundFilter;
+    public ContactFilter2D deathFilter;
     public int maxHits;
     [Header("BottomBox")]
     public Vector2 groundBoxPos;
@@ -32,6 +34,10 @@ public class Collisions2D : MonoBehaviour {
     [Header("WallBox")]
     public Vector2 wallBoxPos;
     public Vector2 wallBoxSize;
+
+    [Header("DeathBox")]
+    public Vector2 deathBoxPos;
+    public Vector2 deathBoxSize;
 
     [Header("CellBox")]
     public Vector2 cellBoxPos;
@@ -68,6 +74,7 @@ public class Collisions2D : MonoBehaviour {
     {
         ResetState();
         GroundDetection();
+        DeathDetection();
         WallDetection();
         CellDetection();
 
@@ -88,6 +95,23 @@ public class Collisions2D : MonoBehaviour {
         if(isGrounded) isFalling = false;
         if(isGrounded && !wasGroundedLastFrame) justGotGrounded = true;
         if(!isGrounded && wasGroundedLastFrame) justNOTGrounded = true;
+
+    }
+    void DeathDetection()
+    {
+
+        Collider2D[] results = new Collider2D[maxHits];
+        Vector2 pos = this.transform.position;
+        int numHits = Physics2D.OverlapBox(pos + groundBoxPos, groundBoxSize, 0, deathFilter, results);
+
+        if (numHits > 0)
+        {
+            isGrounded = true;
+        }
+
+        if (isGrounded) isFalling = false;
+        if (isGrounded && !wasGroundedLastFrame) justGotGrounded = true;
+        if (!isGrounded && wasGroundedLastFrame) justNOTGrounded = true;
 
     }
     void WallDetection()
@@ -138,5 +162,6 @@ public class Collisions2D : MonoBehaviour {
         Gizmos.DrawWireCube(pos + groundBoxPos, groundBoxSize);
         Gizmos.DrawWireCube(pos + wallBoxPos, wallBoxSize);
         Gizmos.DrawWireCube(pos + cellBoxPos, cellBoxSize);
+        Gizmos.DrawWireCube(pos + deathBoxPos, deathBoxSize);
     }
 }

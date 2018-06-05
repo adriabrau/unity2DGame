@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.AltGr))
+        if(Input.GetKey(KeyCode.RightShift))
         {
             if(Input.GetKeyDown(KeyCode.N)) LoadNext();
             if(Input.GetKeyDown(KeyCode.B)) StartLoad(backScene);

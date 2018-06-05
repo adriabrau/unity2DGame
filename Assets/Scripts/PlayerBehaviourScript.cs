@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(Collisions2D))]
@@ -8,13 +9,17 @@ public class PlayerBehaviourScript : MonoBehaviour
 {
     public enum State { Default, Dead, God }
     public State state;
-
+    //public enum targetTransform { }
+	[SerializeField] private Transform targetTransform;
     [Header("State")]
     public bool canMove = true;
     public bool canJump = true;
     public bool running = false;
     public bool isFacingRight = true;
     public bool isJumping = false;
+    public bool attack = false;
+    public bool isTouchingDeathGround = false;
+    public bool canAttack = true;
     [Header("Physics")]
     public Rigidbody2D rb;
     public Collisions2D collisions;
@@ -29,22 +34,32 @@ public class PlayerBehaviourScript : MonoBehaviour
     [Header("Movement")]
     public Vector2 axis;
     public float horizontalSpeed;
+    [Header("Damage")]
+    public int life = 3;
+	public int damage = 1;
+    public bool dead = false;
+
     //[Header("Transforms")]
     //public Transform flipTransform;
     [Header("Graphics")]
     public SpriteRenderer rend;
     private Animator anim;
-
-
+	public Transform target;
+	[SerializeField] private float distanceFromTarget;
+	public Enemy enemy;
 
     void Start()
     {
+        targetTransform = GameObject.FindGameObjectWithTag("Enemy").transform;
+        //target = GameObject.FindGameObjectsWithTag("Enemy");
         collisions = GetComponent<Collisions2D>();
         rb = GetComponent<Rigidbody2D>();
-
+		enemy = GetComponent<Enemy>();
         collisions.Start();
-
+        attack = false;
         isFacingRight = true;
+
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -74,11 +89,14 @@ public class PlayerBehaviourScript : MonoBehaviour
         anim.SetBool("isGrounded", collisions.isGrounded);
         anim.SetFloat("speedX", Mathf.Abs(rb.velocity.x));
         anim.SetFloat("speedY", Mathf.Abs(rb.velocity.y));
+		anim.SetInteger("life", life);
     }
 
     private void FixedUpdate()
     {
         collisions.FixedUpdate();
+
+        if(isTouchingDeathGround)
 
         if(isJumping)
         {
@@ -121,7 +139,7 @@ public class PlayerBehaviourScript : MonoBehaviour
 
         if(running) movementSpeed = runSpeed;
         else movementSpeed = walkSpeed;
-
+        anim.SetFloat("speedX", Mathf.Abs(rb.velocity.x));
         horizontalSpeed = axis.x * movementSpeed;
     }
     void VerticalMovement()
@@ -142,6 +160,15 @@ public class PlayerBehaviourScript : MonoBehaviour
         rend.flipX = !rend.flipX;
         isFacingRight = !isFacingRight;
         collisions.Flip(isFacingRight);
+    }
+    void Attack()
+    {
+        anim.SetTrigger("attack");
+		if (Vector3.Distance (transform.position, target.position) < 1f) 
+		{
+			targetTransform.GetComponent<Enemy> ().Damage (damage);
+		} 
+
     }
 
 
@@ -164,9 +191,30 @@ public class PlayerBehaviourScript : MonoBehaviour
         }
 
     }
-    public void Damage(int hit)
+    public void AttackStart()
     {
+        if(!canAttack) return;
+
+        if(state == State.Default)
+        {
+            Attack();
+            
+        }
 
     }
+    public void Damage(int hit)
+    {
+        life -= hit;
+        if(life <= 0)
+        {
+            life = 0;
+            dead = true;
+            SceneManager.LoadScene("manager2D");
+        }
+    }
+	void CalculateDistanceFromTarget()
+	{
+		distanceFromTarget = Vector2.Distance(transform.position, targetTransform.position);
+	}
     #endregion
 }

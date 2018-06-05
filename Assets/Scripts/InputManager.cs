@@ -23,6 +23,8 @@ public class InputManager : MonoBehaviour
         InputJump();
         // Speed
         InputSpeed();
+        // Attack
+        InputAttack();
     }
 
     #region Controls
@@ -49,5 +51,15 @@ public class InputManager : MonoBehaviour
         if(Input.GetButtonDown("Run")) player.running = true;
         else if(Input.GetButtonUp("Run")) player.running = false;
     }
+    
+    void InputAttack()
+    {
+        if(Input.GetButtonDown("Attack"))
+        {
+            player.AttackStart();
+
+        }
+    }
+
     #endregion
 }
